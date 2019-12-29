@@ -3,6 +3,7 @@
 # もしかして、常にXかYの差の絶対値の大きい方と一致するのでは?
 # と思ったが、完全に直線上にいるときは１歩多くかかる
 
+
 def main():
     goal = [int(goal) for goal in input().split()]
     porn = [int(porn) for porn in input().split()]
@@ -17,7 +18,8 @@ def main():
             cnt += 1
         elif porn[0] == porn[1] & porn[0] == goal[0]:
             cnt = -1
-    print (cnt)
+    print(cnt)
+
 
 if __name__ == "__main__":
     main()

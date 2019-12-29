@@ -1,2 +1,2 @@
 s = input()
-print("("+s+input()+s+")/")
+print("(" + s + input() + s + ")/")

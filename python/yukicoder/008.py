@@ -1,10 +1,10 @@
-rslts = []
+results = []
 for P in range(int(input())):
     N, K = [int(i) for i in input().split()]
-    if (N-1)%(K+1) != 0:
-        rslts.append("Win")
+    if (N - 1) % (K + 1) != 0:
+        results.append("Win")
     else:
-        rslts.append("Lose")
+        results.append("Lose")
 
-for rslt in rslts:
-    print(rslt)
+for result in results:
+    print(result)

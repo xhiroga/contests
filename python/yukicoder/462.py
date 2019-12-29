@@ -4,36 +4,35 @@
 # 1. Nビットで表せない文字がakで指定されている
 # 2. kとa1~akまでの引数の個数が一致しない
 
+
 def main():
     N, K = [int(box) for box in input().split()]
     aList = sorted([int(box) for box in input().split()])
-    ptn = 0 # 回答 ptn通り
+    ptn = 0  # 回答 ptn通り
 
-    print (N)
-    print (aList)
-# 1. 可否判定
-# 6日知らず(=数字が次に大きい数字に遷移する際、その差は必ず未使用のビットの和である)
+    print(N)
+    print(aList)
+    # 1. 可否判定
+    # 6日知らず(=数字が次に大きい数字に遷移する際、その差は必ず未使用のビットの和である)
 
     for i, aS in enumerate(aList):
-        print ("i = " + str(i))
-        if aS == aList[K-1]: #最後の数字の場合、比較対象がないのでbreakする。
+        print("i = " + str(i))
+        if aS == aList[K - 1]:  # 最後の数字の場合、比較対象がないのでbreakする。
             print("end")
             break
-        aL = aList[i+1]
+        aL = aList[i + 1]
         print(aS)
         print(aL)
-        if (aS|aL)^aL == 0: # aSの各桁よりもaLの各桁の方が必ず大きい = (aS or aL) xor aL が必ず 0 になる
+        if (aS | aL) ^ aL == 0:  # aSの各桁よりもaLの各桁の方が必ず大きい = (aS or aL) xor aL が必ず 0 になる
             continue
             print("OK")
         else:
-            print (0) #不可能
+            print(0)  # 不可能
             print("impossible")
             break
 
+
 # 2. ルート検索
-
-
-
 
 
 # 勉強スペースここから
@@ -43,7 +42,8 @@ def fact(n):
     if n == 0:
         return 1
     else:
-        return n * fact (n-1)
+        return n * fact(n - 1)
+
 
 # 勉強スペースここまで
 

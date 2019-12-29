@@ -7,6 +7,7 @@ def main():
     for _, name in sorted(d.items(), key=lambda x: x[0], reverse=True):
         print(name)
 
+
 # sortedについて
 # 個々の要素から比較項目を取り出すための式を渡す
 # pythonではlambdaは()=>{}ではなく lambda x: x*2 みたいに返す
