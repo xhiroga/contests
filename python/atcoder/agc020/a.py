@@ -3,9 +3,9 @@ def main():
     A = int(A)
     B = int(B)
 
-    if A+1 == B:
+    if A + 1 == B:
         print("Borys")
-    elif (B-A)%2 == 1:
+    elif (B - A) % 2 == 1:
         print("Borys")
     else:
         print("Alice")
