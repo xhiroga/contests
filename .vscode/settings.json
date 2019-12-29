@@ -2,13 +2,4 @@
     "python.venvPath": "${workspaceFolder}/python/.venv",
     "python.pythonPath": "${workspaceFolder}/python/.venv/bin/python",
     "python.formatting.provider": "black",
-    "python.formatting.blackPath": "${workspaceFolder}/python/.venv/bin/black",
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--max-line-length",
-        "88"
-    ],
-    "python.linting.flake8Path": "${workspaceFolder}/python/.venv/bin/flake8",
-    "python.linting.mypyEnabled": true,
-    "python.linting.mypyPath": "${workspaceFolder}/python/.venv/bin/mypy"
 }
