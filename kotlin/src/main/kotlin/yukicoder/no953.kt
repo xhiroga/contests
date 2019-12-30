@@ -10,7 +10,7 @@ class Fib {
     }
 }
 
-fun no953(givenNums: ArrayList<Long>): Int {
+fun solveNo953(givenNums: ArrayList<Long>): Int {
     val nums = givenNums.reversed()
     val fib = Fib()
     while (fib.num < nums[0]) {

@@ -7,10 +7,10 @@ import java.util.*
 
 fun main() {
     val num = Scanner(System.`in`).nextBigInteger(2)
-    println(no884(num))
+    println(solveNo884(num))
 }
 
-fun no884(num: BigInteger): Int {
+fun solveNo884(num: BigInteger): Int {
     return get2の累乗との差が0になるまで2の累乗を足すか引くかし続けた回数(num)
 }
 

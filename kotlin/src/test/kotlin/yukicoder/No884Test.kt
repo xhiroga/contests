@@ -9,17 +9,17 @@ class No884Test {
     @Test
     fun testNo884() {
         // 例
-        assertEquals(2, no884(BigInteger("101",2 )))
-        assertEquals(2, no884(BigInteger("111",2 )))
-        assertEquals(8, no884(BigInteger("11110101101110110001100", 2)))
+        assertEquals(2, solveNo884(BigInteger("101",2 )))
+        assertEquals(2, solveNo884(BigInteger("111",2 )))
+        assertEquals(8, solveNo884(BigInteger("11110101101110110001100", 2)))
 
         // 数字の反転を繰り返して 10^x を作るゲーム、と捉えると...
-        assertEquals(1, no884(BigInteger("10000000",2))) // 既に 10^x の場合は1
+        assertEquals(1, solveNo884(BigInteger("10000000",2))) // 既に 10^x の場合は1
 
-        assertEquals(2, no884(BigInteger("10000001",2)))
-        assertEquals(3, no884(BigInteger("10000011",2)))
-        assertEquals(3, no884(BigInteger("11110111",2))) // 111...を経由したほうが早い
-        assertEquals(4, no884(BigInteger("1111000111",2))) // 111...を経由してもしなくても変わらない
+        assertEquals(2, solveNo884(BigInteger("10000001",2)))
+        assertEquals(3, solveNo884(BigInteger("10000011",2)))
+        assertEquals(3, solveNo884(BigInteger("11110111",2))) // 111...を経由したほうが早い
+        assertEquals(4, solveNo884(BigInteger("1111000111",2))) // 111...を経由してもしなくても変わらない
 
         // 最寄りの2^x を目指すゲームと考えたほうが分かりやすいかもしれない。
         // 例: 53は32より64に近い。(64-53=9)は16より8に近い。(9-8=1)は2^x。したがって、53+8+1=64
