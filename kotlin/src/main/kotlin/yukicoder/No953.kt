@@ -1,8 +1,8 @@
 package yukicoder
 
-object fib {
-    var prevNum = 0
-    var num = 1
+class Fib {
+    var prevNum = 0L
+    var num = 1L
     fun next() {
         val numBeforeOperation = num
         num += prevNum
@@ -10,13 +10,17 @@ object fib {
     }
 }
 
-fun no953(givenNums: ArrayList<Int>): Int {
+fun no953(givenNums: ArrayList<Long>): Int {
     val nums = givenNums.reversed()
-    while (fib.num < nums.first()) {
+    val fib = Fib()
+    while (fib.num < nums[0]) {
         fib.next()
     }
-    return if (fib.num == nums.first()) {
+    return if (fib.num == nums[0]) {
         fib.next()
+        if (nums[0] == 1L && nums[1] == 2L){
+            fib.next()
+        }
         if (fib.num == nums[1]) {
             fib.next()
             if (fib.num == nums[2]) {
