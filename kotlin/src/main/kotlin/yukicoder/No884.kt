@@ -2,38 +2,39 @@
 
 package yukicoder
 
-import kotlin.math.min
-import kotlin.math.pow
+import java.math.BigInteger
+import java.util.*
 
 fun main() {
-    val n = readLine()!!
-    println(no884(n))
+    val num = Scanner(System.`in`).nextBigInteger(2)
+    println(no884(num))
 }
 
-fun no884(n: String): Int {
-    val num = Integer.parseInt(n, 2)
+fun no884(num: BigInteger): Int {
     return get2の累乗との差が0になるまで2の累乗を足すか引くかし続けた回数(num)
 }
 
-fun get2の累乗との差が0になるまで2の累乗を足すか引くかし続けた回数(num: Int, count: Int = 0): Int {
-    val 最寄りの2の累乗との差 = get最寄りの2の累乗との差(num)
-    return if (最寄りの2の累乗との差 == 0) {
-        count + 1
-    } else {
-        get2の累乗との差が0になるまで2の累乗を足すか引くかし続けた回数(最寄りの2の累乗との差, count + 1)
+fun get2の累乗との差が0になるまで2の累乗を足すか引くかし続けた回数(num: BigInteger): Int {
+    var 最寄りの2の累乗との差 = get最寄りの2の累乗との差(num)
+    var count = 1
+
+    while (最寄りの2の累乗との差 != BigInteger.valueOf(0)) {
+        最寄りの2の累乗との差 = get最寄りの2の累乗との差(最寄りの2の累乗との差)
+        count += 1
     }
+    return count
 }
 
-val `2の累乗リスト` = (0..200000).map { 2.0.pow(it.toDouble()).toInt() }
-fun get最寄りの2の累乗との差(num: Int): Int {
-    for (`2の累乗` in `2の累乗リスト`) {
-        if (num == `2の累乗`) {
-            return 0
-        } else if (num < `2の累乗`) {
-            val diff = `2の累乗` - num
-            return min(diff, `2の累乗` / 2 - diff)
-        }
+fun get最寄りの2の累乗との差(num: BigInteger): BigInteger {
+    val digit = num.bitLength()
+    val 同桁の2の累乗数 = BigInteger("1").shiftLeft(digit - 1)
+    val 同桁の2の累乗数からの差分 = 同桁の2の累乗数.xor(num)
+
+    val i = 同桁の2の累乗数.shiftRight(1).compareTo(同桁の2の累乗数からの差分)
+    return if (i > -1) {
+        同桁の2の累乗数からの差分
+    } else {
+        同桁の2の累乗数 - 同桁の2の累乗数からの差分
     }
-    throw Exception("Impossible")
 }
 
