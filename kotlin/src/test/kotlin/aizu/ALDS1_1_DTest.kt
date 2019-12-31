@@ -3,7 +3,7 @@ package aizu
 import org.junit.Assert.*
 import yukicoder.solveNo953
 
-class ALDS1_1_DKtTest {
+class ALDS1_1_DTest {
 
     @org.junit.Test
     fun case1() {
