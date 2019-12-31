@@ -4,7 +4,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 // Bubble Sort
-// バブルソートも挿入ソートも、未ソートの領域からソート済みの領域にデータを持ってくる点で変わらない。
+// バブルソートも挿入ソートも、値を比較的ソートされた領域に持ってくる点で変わらない。
 // 未ソート領域の値のチョイスの仕方に違いが出る。未ソート内の最小値ならバブルソート、一番手近な値なら挿入ソート。
 internal fun solve(size: Int, nums: ArrayList<Int>): Result {
     var 交換回数 = 0
