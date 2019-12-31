@@ -23,7 +23,7 @@ internal fun solve(inputs: List<String>): Int {
     return stack.pop()
 }
 
-internal fun Int.opeBy(operation: String): (other: Int) -> Int {
+internal inline fun Int.opeBy(operation: String): (other: Int) -> Int {
     return when (operation) {
         "+" -> { other: Int -> this.plus(other) }
         "-" -> { other: Int -> this.minus(other) }
