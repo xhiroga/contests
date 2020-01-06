@@ -15,6 +15,7 @@ internal fun solve(size: Int, nodes: List<InputNode>): List<OutputNode> {
 
     fun getNodes(id: Int, parentId: Int, sibling: Int, depth: Int): List<OutputNode> {
         val children = nodes[id].children.exist()
+        // MEMO: ListではなくMapの方が親ノードを探しやすいので便利かもしれない。
         val res = mutableListOf<OutputNode>(
             OutputNode(
                 id = id,
