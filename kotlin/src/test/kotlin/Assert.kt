@@ -2,7 +2,7 @@ import org.junit.Assert
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 
-// Assert is Java class. It does not have companion object and cannot add static method as extension.
+// Assert is Java class. It does not have companion object so I cannot add static method as extension.
 fun assertIO(input: String, output: String, func: () -> Unit) {
     System.setIn(input.trimIndent().byteInputStream())
     val baos = ByteArrayOutputStream()
