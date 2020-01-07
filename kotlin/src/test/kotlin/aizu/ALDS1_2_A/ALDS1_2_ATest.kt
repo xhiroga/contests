@@ -20,11 +20,11 @@ class ALDS1_2_ATest {
             """
             5
             5 3 2 4 1
-            """,
+            """.trimIndent(),
             """
             1 2 3 4 5
             8
-            """,
+            """.trimIndent(),
             ::main
         )
     }

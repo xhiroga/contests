@@ -4,10 +4,10 @@ import java.io.PrintStream
 
 // Assert is Java class. It does not have companion object so I cannot add static method as extension.
 fun assertIO(input: String, output: String, func: () -> Unit) {
-    System.setIn(input.trimIndent().byteInputStream())
+    System.setIn(input.byteInputStream())
     val baos = ByteArrayOutputStream()
     val ps = PrintStream(baos)
     System.setOut(ps)
     func()
-    Assert.assertEquals(output.trimIndent(), baos.toString())
+    Assert.assertEquals(output, baos.toString())
 }
