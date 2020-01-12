@@ -52,9 +52,9 @@ internal data class BinaryTree(
     }
 
     fun write() {
-        this.forPreOrder { print("${it.id} ") }
+        this.forInOrder { print(" ${it.id}") }
         println("")
-        this.forInOrder { print("${it.id} ") }
+        this.forPreOrder { print(" ${it.id}") }
     }
 
     fun forPreOrder(action: (Node) -> Unit) {
@@ -72,8 +72,18 @@ internal data class BinaryTree(
     }
 
     fun forInOrder(action: (Node) -> Unit) {
+        fun inOderExec(index: Int) {
+            val node = this.nodes[index]!!
+            if (node.left != -1) {
+                inOderExec(node.left)
+            }
+            action(node)
+            if (node.right != -1) {
+                inOderExec(node.right)
+            }
+        }
+        inOderExec(this.root!!)
     }
-
 }
 
 internal fun solve(commands: List<Command>) {

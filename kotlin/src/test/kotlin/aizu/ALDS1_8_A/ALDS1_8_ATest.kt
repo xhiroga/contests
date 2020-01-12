@@ -18,10 +18,8 @@ class ALDS1_8_ATest {
             insert 25
             print  
             """.trimIndent(),
-            """
-            1 12 17 20 25 30 88 
-            30 12 1 20 17 25 88 
-            """.trimIndent(),
+            """ 1 12 17 20 25 30 88
+ 30 12 1 20 17 25 88""",
             ::main
         )
     }
