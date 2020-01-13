@@ -10,5 +10,6 @@ allprojects {
 }
 
 subprojects {
+    group = "hiroga-cc"
     version = "1.0"
 }
