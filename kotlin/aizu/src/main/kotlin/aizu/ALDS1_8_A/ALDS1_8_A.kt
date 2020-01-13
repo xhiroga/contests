@@ -100,7 +100,7 @@ internal fun solve(commands: List<Command>) {
     }
 }
 
-fun main() {
+fun main(args: Array<String>) {
     val br = System.`in`.bufferedReader()
     val size = br.readLine().toInt()
     val commands = List(size) {

@@ -41,7 +41,7 @@ internal fun solveAlds1_1_D_On(入力数: Int, 価格s: ArrayList<Int>): Int {
 
 // To improving time, create inline functions instead of standalone functions.
 
-fun main() {
+fun main(args: Array<String>) {
     // Scanner slows down, use InputReader
     val br = BufferedReader(InputStreamReader(System.`in`))
 

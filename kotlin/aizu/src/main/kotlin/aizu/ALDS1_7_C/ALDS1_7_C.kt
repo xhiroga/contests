@@ -50,7 +50,7 @@ internal fun postOrder(inputs: List<Node>): MutableList<Int> {
     return outputs
 }
 
-fun main() {
+fun main(args: Array<String>) {
     var OUTPUT = ""
 
     val br = System.`in`.bufferedReader()

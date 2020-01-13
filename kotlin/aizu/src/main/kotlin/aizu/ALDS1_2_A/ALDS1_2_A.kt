@@ -47,7 +47,7 @@ internal data class Result(
 
 // To improving time, create inline functions instead of standalone functions.
 
-fun main() {
+fun main(args: Array<String>) {
     var OUTPUT = ""
 
     // InputStreamReaderをそのまま使うと実行ごとに読み込みが発生するため、BufferedReaderを用いる。

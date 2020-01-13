@@ -34,7 +34,7 @@ internal inline fun Int.opeBy(operation: String): (other: Int) -> Int {
 
 // To improving time, create inline functions instead of standalone functions.
 
-fun main() {
+fun main(args: Array<String>) {
     // Scanner slows down, use InputReader
     val br = BufferedReader(InputStreamReader(System.`in`))
 
