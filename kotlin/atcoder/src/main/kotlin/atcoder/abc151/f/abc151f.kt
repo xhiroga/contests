@@ -9,6 +9,7 @@ internal data class Dot(
     }
 }
 
+// 等距離な頂点が奇数個ある場合にWA。
 internal fun solve(count: Int, dots: List<Dot>): String {
     return (dots.subList(0, count - 1).mapIndexed { index, dot ->
         {
