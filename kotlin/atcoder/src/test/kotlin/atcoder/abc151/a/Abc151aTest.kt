@@ -1,18 +1,18 @@
 package atcoder.abc151.a
 
-import assertIOat
+import assertIO
 import org.junit.Test
 
 class Abc151aTest{
 
     @Test
     fun case1(){
-        assertIOat("a", "b", ::main)
+        assertIO("a", "b", ::main)
     }
 
     @Test
     fun case2(){
-        assertIOat("y", "z", ::main)
+        assertIO("y", "z", ::main)
     }
 }
 

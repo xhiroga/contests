@@ -1,5 +1,5 @@
 rootProject.name = "kotlin"
 include(
-//    "atcoder",
+    "atcoder",
     "test-utility"
 )

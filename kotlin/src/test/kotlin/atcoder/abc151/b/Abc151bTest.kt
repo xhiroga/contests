@@ -1,6 +1,5 @@
 package atcoder.abc151.b
 
-import assertIO
 import assertIOat
 import org.junit.Test
 
