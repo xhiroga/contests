@@ -1,12 +1,12 @@
 package atcoder.abc151.c
 
-import assertIOat
+import assertIO
 import org.junit.Test
 
 class Abc151cTest{
     @Test
     fun case1(){
-        assertIOat("""
+        assertIO("""
             2 5
             1 WA
             1 AC
@@ -20,7 +20,7 @@ class Abc151cTest{
 
     @Test
     fun case2(){
-        assertIOat("""
+        assertIO("""
             100000 3
             7777 AC
             7777 AC
@@ -32,7 +32,7 @@ class Abc151cTest{
 
     @Test
     fun case3(){
-        assertIOat("""
+        assertIO("""
             6 0
             """.trimIndent(),
             "0 0", ::main

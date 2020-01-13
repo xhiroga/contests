@@ -1,12 +1,12 @@
 package atcoder.abc151.f
 
-import assertIOat
+import assertIO
 import org.junit.Test
 
 class Abc151fTest{
     @Test
     fun case3(){
-        assertIOat("""
+        assertIO("""
             10
             10 9
             5 9
