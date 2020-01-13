@@ -1,5 +1,7 @@
 package atcoder
 
+import java.util.*
+
 fun abc124b(旅館の数: Int, heights: ArrayList<Int>): Int {
     val maxIndex = 旅館の数 - 1
     val 東から西の順番の各山の高さ = heights.reversed()
