@@ -1,6 +1,6 @@
 package aizu.ALDS1_7_B
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class ALDS1_7_BTest {

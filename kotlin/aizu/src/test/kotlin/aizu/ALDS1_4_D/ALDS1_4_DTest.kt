@@ -1,6 +1,6 @@
 package aizu.ALDS1_4_D
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class ALDS1_4_DTest {

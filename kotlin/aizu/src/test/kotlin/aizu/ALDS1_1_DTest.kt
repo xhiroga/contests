@@ -1,7 +1,6 @@
 package aizu
 
-import org.junit.Assert.*
-import yukicoder.solveNo953
+import org.junit.Assert.assertEquals
 
 class ALDS1_1_DTest {
 

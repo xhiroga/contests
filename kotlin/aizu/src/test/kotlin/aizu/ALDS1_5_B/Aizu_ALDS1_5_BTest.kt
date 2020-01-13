@@ -1,9 +1,9 @@
     package aizu.ALDS1_5_B
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
-class Aizu_ALDS1_5_BTest {
+    class Aizu_ALDS1_5_BTest {
     @Test
     fun case1() {
         assertEquals(
