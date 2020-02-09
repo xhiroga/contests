@@ -4,6 +4,8 @@ from typing import Callable
 from unittest import TestCase
 
 
+# Thanks to SlackOverFlow
+# https://stackoverflow.com/questions/38861101/how-can-i-test-the-standard-input-and-standard-output-in-python-script-with-a-un
 def assertIo(self: TestCase, stdin: str, stdout: str, fun: Callable[[None], None]):
     stub_stdin(self, stdin)
     stub_stdouts(self)
